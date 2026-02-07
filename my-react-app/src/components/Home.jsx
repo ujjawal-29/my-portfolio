@@ -144,6 +144,8 @@
 
 
 import Education from "./Education";
+
+
 import "./Home.css";
 import { FaThumbtack, FaGithub, FaLinkedin, FaFilePdf } from "react-icons/fa";
 
