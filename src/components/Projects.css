@@ -1,0 +1,122 @@
+/* Container styling */
+.projects-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.projects-section h2 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Heading ke niche choti line */
+.projects-section h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #e91e63; /* Home page wala pink color */
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* Card Styling - Home page ke photo-card se match karta hua */
+.project-item .card {
+  border: 1px solid #f0f0f0;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background: #fff;
+}
+
+.project-item .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(233, 30, 99, 0.1); /* Pinkish shadow on hover */
+  border-color: #ffccd5;
+}
+
+/* Image styling */
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+/* Card Body */
+.card-body {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.card-text {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.card-body p strong {
+  color: #e91e63; /* Tech stack highlights */
+}
+
+/* Buttons Styling - Home page ke buttons se match */
+.project-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn1 {
+  flex: 1;
+  text-decoration: none;
+  padding: 8px 5px;
+  border: 1px solid #ffccd5;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.btn1:hover {
+  background: #fff5f6;
+  border-color: #e91e63;
+  color: #e91e63;
+}
+
+/* Scroll Animation Classes */
+.project-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.project-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile responsive fix for buttons */
+@media (max-width: 576px) {
+  .project-buttons {
+    flex-wrap: nowrap; /* Taki mobile pe bhi ek hi line me rahein */
+  }
+  .btn1 {
+    font-size: 0.75rem;
+    padding: 6px 4px;
+  }
+}
